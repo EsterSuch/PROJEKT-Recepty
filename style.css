@@ -48,7 +48,6 @@ background-size: 100%, cover; */
   background-size: 100%, cover;
   background-position: center;
   color: white;
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4);*/
 }
 
 .text{
@@ -72,7 +71,7 @@ background-size: 100%, cover; */
 }
 
 .receptH{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/salat.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/salat.jpg");
   min-height: 200px;
  }
 .receptA, .receptB, .receptC, .receptD{
@@ -92,19 +91,19 @@ background-size: 100%, cover; */
 }
 
 .receptA{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/chlebicek.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/chlebicek.jpg");
   order: 1;
 }
 .receptB{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/tacos.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/tacos.jpg");
   order: 2;
 }
 .receptC{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/cizrna.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/cizrna.jpg");
   order: 3;
 }
 .receptD{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/burger.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/burger.jpg");
   order: 4;
 }
 
