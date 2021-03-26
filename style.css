@@ -107,9 +107,24 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
   .receptA, .receptB, .receptC, .receptD{
     flex-basis: 50%;
   }
+  .receptH, .receptA, .receptB, .receptC, .receptD {
+    padding: 20px;
+  }
   .receptA, .receptC{
     border-right: 1px solid white;
   }
+  .receptH{
+     min-height: 250px;
+   }
+  .receptH .nazev{
+    font-size: 36px;
+  }
+  .receptA, .receptB, .receptC, .receptD{
+    min-height: 150px;
+  }
+  .receptA .nazev, .receptB .nazev, .receptC .nazev, .receptD .nazev{
+    font-size: 22px;
+  } 
 }
 
 @media screen and (min-width: 860px){
@@ -119,11 +134,21 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
   .receptH{
     flex-basis: calc(100%/3);
     border-right: 1px solid white;
+    min-height: 400px;
   }
   .receptyMale{
     flex-direction: row;
     flex-basis: calc((100%/3) * 2);
   }
+  .receptH .nazev{
+   font-size: 48px;
+ }
+ .receptA, .receptB, .receptC, .receptD{
+   min-height: 200px;
+ }
+ .receptA .nazev, .receptB .nazev, .receptC .nazev, .receptD .nazev{
+   font-size: 28px;
+ } 
   
 
 /*Další varianta CSS, kdyby pro rozlišení min 860px bylo vyžadováno jiné rozložení. S tímto CSS to funguje podle zadání.*/
