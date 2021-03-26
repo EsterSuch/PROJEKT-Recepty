@@ -33,22 +33,16 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
-/*
-Mám přes obrázky přidanou ještě poloprůhlednou černou barvu. Tu přidám tak, že přes obrázkové pozadí, přidám ještě pozadí s barevným přechodem z poloprůhledné černé do poloprůhledné černé.
-Vícenásobná pozadí na jednom elementu se v CSS prostě jen oddělují čárkou. V pořadí první pozadí je nejvíc nahoře nad ostatními pozadími, další jsou pod ním. Když nastavíš vícenásobné pozadí v background-image, tak i v ostatních vlastnostech týkajících se pozadí pak nastavuješ všechno vícekrát a odděluješ čárkou - pro každé pozadí samostatná hodnota, ve stejném pořadí jako jsou pozadí v background-image.
-
-background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4),
-    url(images/obrazek.jpg);
-/* a potom třeba: 
-
-background-size: 100%, cover; */
-
   .receptH, .receptA, .receptB, .receptC, .receptD {
   background-size: 100%, cover;
   background-position: center;
   color: white;
-}
+  padding: 10px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
 
 .text{
   font-family: "Source Sans Pro";
@@ -62,34 +56,24 @@ background-size: 100%, cover; */
   font-weight: 800;
 }
 
-.receptH, .receptA, .receptB, .receptC, .receptD{
-  padding: 10px;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .receptH{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/salat.jpg");
   min-height: 200px;
  }
-.receptA, .receptB, .receptC, .receptD{
-  min-height: 90px;
-}
-
 .receptH .nazev{
   font-size: 28px;
-}
-.receptA .nazev, .receptB .nazev, .receptC .nazev, .receptD .nazev{
-  font-size: 18px;
 }
 .receptyMale{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-
+.receptA .nazev, .receptB .nazev, .receptC .nazev, .receptD .nazev{
+  font-size: 18px;
+}
+.receptA, .receptB, .receptC, .receptD{
+  min-height: 90px;
+}
 .receptA{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/chlebicek.jpg");
   order: 1;
@@ -115,6 +99,30 @@ background-size: 100%, cover; */
     order: 2;
   }
 }
+@media screen and (min-width: 480px){
+  .receptyMale{
+    flex-direction: row;
+  }
+  .receptA, .receptB, .receptC, .receptD{
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 860px){
+  .receptyVse{
+    display: flex;
+  }
+  .receptH{
+    flex-basis: calc(100%/3);
+  }
+  .receptyMale{
+    flex-direction: row;
+    flex-basis: calc((100%/3) * 2);
+  }
+  
+
+/*Další varianta CSS, kdyby pro rozlišení min 860px bylo vyžadováno jiné rozložení. S tímto CSS to funguje podle zadání.*/
+/*
 @media screen and (min-width: 480px) and (max-width: 859px){
   .receptyMale{
     flex-direction: row;
@@ -139,4 +147,4 @@ background-size: 100%, cover; */
     flex-basis: calc(100%/3);
   }
   
-}
+}*/
