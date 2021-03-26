@@ -42,6 +42,7 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-bottom: 1px solid white;
   }
 
 .text{
@@ -57,7 +58,7 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
 }
 
 .receptH{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/salat.jpg");
+  background-image: linear-gradient(rgba(104, 49, 49, 0.4), rgba(0, 0, 0, 0.4)), url("images/salat.jpg");
   min-height: 200px;
  }
 .receptH .nazev{
@@ -75,19 +76,19 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
   min-height: 90px;
 }
 .receptA{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/chlebicek.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/chlebicek.jpg");
   order: 1;
 }
 .receptB{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/tacos.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/tacos.jpg");
   order: 2;
 }
 .receptC{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/cizrna.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/cizrna.jpg");
   order: 3;
 }
 .receptD{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/burger.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/burger.jpg");
   order: 4;
 }
 
@@ -106,6 +107,9 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
   .receptA, .receptB, .receptC, .receptD{
     flex-basis: 50%;
   }
+  .receptA, .receptC{
+    border-right: 1px solid white;
+  }
 }
 
 @media screen and (min-width: 860px){
@@ -114,6 +118,7 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
   }
   .receptH{
     flex-basis: calc(100%/3);
+    border-right: 1px solid white;
   }
   .receptyMale{
     flex-direction: row;
